@@ -1,7 +1,8 @@
-# Личный проект «{{projectTitle}}»
+# Личный проект «Cедона»
 
 * Студент: [Ovlyakul Hudayberdyyev](https://htmlacademy.ru/profile/id2292039).
 * Наставник: `Неизвестно`.
+* Сайт: [Мой проект Седона](https://ovlyakulh.github.io/Sedona/).
 
 ---
 
