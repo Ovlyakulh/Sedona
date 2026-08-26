@@ -4,11 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SEDONA</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header class="page-header">
       <a href="index.html" class="page-header-link">
-        <img src="images/svg/logo.svg" alt="Логотипа сайта Седона" class="page-header-logo" width="140" height="70" />
+        <img
+          src="images/svg/logo.svg"
+          alt="Логотипа сайта Седона"
+          class="page-header-logo"
+          width="140"
+          height="70"
+        />
       </a>
       <nav class="navigation">
         <ul class="navigation-list">
@@ -19,26 +26,34 @@
             <a href="about.html" class="navigation-link">О седоне</a>
           </li>
           <li class="navigation-item">
-            <a
-              href="catalog.html"
-              class="navigation-link navigation-link-current"
-              >Гостиницы</a
-            >
+            <a href="catalog.html" class="navigation-link">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a href="#" class="navigation-link">
               <span class="visually-hidden">Поиск</span>
+              <img
+                src="images/svg/search.svg"
+                width="20"
+                height="20"
+                alt="Поиска"
+                class="navigation-link-search"
+              />
             </a>
           </li>
           <li class="navigation-item">
             <a href="#" class="navigation-link">
               <span class="visually-hidden">Понравившееся</span>
+              <img
+                src="images/svg/hearz.svg"
+                alt=""
+                class="navigation-link-like"
+              />
             </a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link">
+            <a href="#" class="navigation-link button">
               <span class="navigation-user-will">Хочу сюда</span>
             </a>
           </li>
@@ -51,7 +66,13 @@
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a href="" class="breadcrumbs-link">
-              <img src="images/svg/home-page.svg" width="12" height="12" alt="" class="header-inner-image" />
+              <img
+                src="images/svg/home-page.svg"
+                width="12"
+                height="12"
+                alt=""
+                class="header-inner-image"
+              />
               <span class="visually-hidden">Главная</span>
             </a>
           </li>
@@ -59,33 +80,23 @@
             <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ul>
-      </header>
-      <section class="catalog-products">
-        <!-- Секция с каталогом и фильтрами -->
-
-        <h2 class="catalog-products-title">
-          Гостиницы Седоны
-        </h2>
-        <!-- Заголовок секции. visually-hidden — визуально скрывает заголовок,
-       но он остаётся доступным для скринридеров -->
-
-        <form action="https://echo.htmlacademy.ru/" class="catalog-filter">
+        <form action="https://echo.htmlacademy.ru/" class="form-filter">
           <!-- form — создаёт форму для выбора фильтров.
          action — указывает адрес, куда отправятся выбранные данные -->
 
-          <fieldset class="catalog-filter-group">
+          <fieldset class="form-filter-group">
             <!-- fieldset — объединяет связанные элементы формы в одну группу.
            Здесь он объединяет все варианты инфраструктуры:
            «Бассейн», «Парковка» и «Wi-Fi» -->
 
-            <legend class="catalog-filter-title">Инфраструктура:</legend>
+            <legend class="form-filter-title">Инфраструктура:</legend>
             <!-- legend — задаёт название группы fieldset.
            Здесь название группы — «Инфраструктура» -->
 
-            <ul class="catalog-filter-list">
+            <ul class="form-filter-list">
               <!-- ul — создаёт список вариантов фильтра -->
 
-              <li class="catalog-filter-item">
+              <li class="form-filter-item">
                 <!-- li — отдельный пункт списка -->
 
                 <label class="control">
@@ -105,7 +116,7 @@
                 </label>
               </li>
 
-              <li class="catalog-filter-item">
+              <li class="form-filter-item">
                 <label class="control">
                   <input
                     type="checkbox"
@@ -117,7 +128,7 @@
                 </label>
               </li>
 
-              <li class="catalog-filter-item">
+              <li class="form-filter-item">
                 <label class="control">
                   <input type="checkbox" class="control-input" name="wi-fi" />
                   Wi-Fi
@@ -126,19 +137,19 @@
             </ul>
           </fieldset>
 
-          <fieldset class="catalog-filter-group">
+          <fieldset class="form-filter-group">
             <!-- Второй fieldset — отдельная группа формы.
            Здесь объединены варианты выбора типа жилья:
            «Гостиница», «Мотель» и «Апартаменты» -->
 
-            <legend class="catalog-filter-title">Тип жилья:</legend>
+            <legend class="form-filter-title">Тип жилья:</legend>
             <!-- legend — название этой группы.
            Здесь оно сообщает пользователю, что ниже выбирается тип жилья -->
 
-            <ul class="catalog-filter-list">
+            <ul class="form-filter-list">
               <!-- ul — список вариантов типа жилья -->
 
-              <li class="catalog-filter-item">
+              <li class="form-filter-item">
                 <!-- li — один вариант из списка -->
 
                 <label class="control">
@@ -158,7 +169,7 @@
                 </label>
               </li>
 
-              <li class="catalog-filter-item">
+              <li class="form-filter-item">
                 <label class="control">
                   <input
                     type="radio"
@@ -170,7 +181,7 @@
                 </label>
               </li>
 
-              <li class="catalog-filter-item">
+              <li class="form-filter-item">
                 <label class="control">
                   <input
                     type="radio"
@@ -188,7 +199,10 @@
             <button class="form-button" type="submit">Сбросить</button>
           </div>
         </form>
-        <label for="sort">Найдено гостиниц: 38</label>
+      </header>
+      <section class="catalog-products">
+        <!-- Секция с каталогом и фильтрами -->
+        <label for="sort" class="form-label title">Найдено гостиниц: 38</label>
         <select id="sort" aria-label="Сортировка" class="select-control">
           <option value="popular">Сначала популярные</option>
           <option value="cheap">Сначала дешевые</option>
@@ -196,21 +210,39 @@
         </select>
         <a href="#" class="button button-light">
           <span class="visually-hidden">Показать карточки в виде карточек</span>
-          <img src="images/svg/view-icon.svg" alt="Показать карточки в виде карточек" class="schow-card-image">
+          <img
+            src="images/svg/view-icon.svg"
+            alt="Показать карточки в виде карточек"
+            class="schow-card-image"
+          />
         </a>
         <a href="#" class="button button-light">
           <span class="visually-hidden">Показать таблицу</span>
-          <img src="images/svg/tabl-view.svg" alt="Показать карточки в виде таблицы" class="schow-card-image">
+          <img
+            src="images/svg/tabl-view.svg"
+            alt="Показать карточки в виде таблицы"
+            class="schow-card-image"
+          />
         </a>
         <a href="#" class="button button-light">
           <span class="visually-hidden">Показать список</span>
-          <img src="images/svg/list-view.svg" alt="Показать карточки в виде список" class="schow-card-image">
+          <img
+            src="images/svg/list-view.svg"
+            alt="Показать карточки в виде список"
+            class="schow-card-image"
+          />
         </a>
 
         <ul class="product-list">
           <li class="product-card">
-            <a href="" class="product-card -image-link">
-              <img src="images/galery/hotel-1.jpg" width="300" height="212" alt="Коньена с центра внутри показывает с низу высоты Коньена" class="product-card-image" />
+            <a href="#" class="product-card -image-link">
+              <img
+                src="images/galery/hotel-1.jpg"
+                width="300"
+                height="212"
+                alt="Коньена с центра внутри показывает с низу высоты Коньена"
+                class="product-card-image"
+              />
             </a>
             <a href="#" class="product-card-title-link">
               <h3 class="product-card-title">Amara Resort & Spa</h3>
@@ -221,14 +253,19 @@
             <button href="#" class="button button-favorite">в избранное</button>
             <div class="product-card-stars star-4">
               <span class="visually-hidden">4 звезды</span>
-              <img src="#" alt="" class="product-card-star" />
             </div>
             <span class="product-card-rating">Рейтинг: 8,5</span>
           </li>
 
           <li class="product-card">
             <a href="" class="product-card -image-link">
-              <img src="images/galery/hotel-2.jpg" width="300" height="212" alt="Показывает коньены с долика и сверху есть радуга" class="product-card-image" />
+              <img
+                src="images/galery/hotel-2.jpg"
+                width="300"
+                height="212"
+                alt="Показывает коньены с долика и сверху есть радуга"
+                class="product-card-image"
+              />
             </a>
             <a href="#" class="product-card-title-link">
               <h3 class="product-card-title">Villas at Poco Diablo</h3>
@@ -246,7 +283,13 @@
 
           <li class="product-card">
             <a href="" class="product-card -image-link">
-              <img src="images/galery/hotel-3.jpg" width="300" height="212" alt="Показывает Коньены из далека в днем" class="product-card-image" />
+              <img
+                src="images/galery/hotel-3.jpg"
+                width="300"
+                height="212"
+                alt="Показывает Коньены из далека в днем"
+                class="product-card-image"
+              />
             </a>
             <a href="#" class="product-card-title-link">
               <h3 class="product-card-title">Desert Quail Inn</h3>
@@ -264,7 +307,13 @@
 
           <li class="product-card">
             <a href="" class="product-card -image-link">
-              <img src="images/galery/hotel-4.jpg" width="300" height="212" alt="показывает все красоту коньенов в ночи и сверху зведзды" class="product-card-image" />
+              <img
+                src="images/galery/hotel-4.jpg"
+                width="300"
+                height="212"
+                alt="показывает все красоту коньенов в ночи и сверху зведзды"
+                class="product-card-image"
+              />
             </a>
             <a href="#" class="product-card-title-link">
               <h3 class="product-card-title">GreenTree Inn</h3>
@@ -303,7 +352,10 @@
             <a href="#" class="pagination-link">4</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link">5</a>
+            <a class="pagination-link">...</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link">10</a>
           </li>
           <li class="pagination-item">
             <a href="#" class="pagination-link pagination-next">
@@ -320,19 +372,37 @@
           <li class="social-item">
             <a href="#" class="social-link">
               <span class="visually-hidden">Wkontakte</span>
-              <img src="images/social-icon/vk.svg" width="24" height="14" alt="Вконтакте" class="social-image">
+              <img
+                src="images/social-icon/vk.svg"
+                width="24"
+                height="14"
+                alt="Вконтакте"
+                class="social-image"
+              />
             </a>
           </li>
           <li class="social-item">
             <a href="#" class="social-link">
               <span class="visually-hidden">Telegram</span>
-              <img src="images/social-icon/telegram.svg" width="18" height="16" alt="Телеграм" class="social-image">
+              <img
+                src="images/social-icon/telegram.svg"
+                width="18"
+                height="16"
+                alt="Телеграм"
+                class="social-image"
+              />
             </a>
           </li>
           <li class="social-item">
             <a href="#" class="social-link">
               <span class="visually-hidden">Youtube</span>
-              <img src="images/social-icon/youtube.svg" width="22" height="17" alt="Ютуб" class="social-image">
+              <img
+                src="images/social-icon/youtube.svg"
+                width="22"
+                height="17"
+                alt="Ютуб"
+                class="social-image"
+              />
             </a>
           </li>
         </ul>
@@ -340,15 +410,23 @@
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <address class="contacts-address">
-        <p class="contacts-address-text">
-          <a href="tel:+78128121212" class="contacts-phone">+7 (812) 812-12-12</a>
-        </p>
+          <p class="contacts-address-text">
+            <a href="tel:+78128121212" class="contacts-phone"
+              >+7 (812) 812-12-12</a
+            >
+          </p>
         </address>
       </section>
       <section class="newsletter">
         <h2 class="visually-hidden">Получайте лучшие предложения</h2>
         <a href="№" class="newsletter-link">
-          <img src="images/svg/html-academy.svg" width="115" height="33" alt="html-academy" class="newsletter-image">
+          <img
+            src="images/svg/html-academy.svg"
+            width="115"
+            height="33"
+            alt="html-academy"
+            class="newsletter-image"
+          />
         </a>
       </section>
     </footer>
