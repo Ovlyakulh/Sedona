@@ -17,7 +17,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   background-color: #fff;
-  color: #000000;
+  color: #333;
 }
 .button {
   font-weight: 700;
@@ -142,7 +142,7 @@ body {
   background-image: url(../images/backgroaund/subscribe.jpg);
   background-color: #8dc2ed;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   color: #fff;
 }
 .subscribe-text {
@@ -180,7 +180,7 @@ body {
 .header-inner {
   background-image: url(../images/backgroaund/bagraund-filtr.jpg);
   background-color: #8dc2ed;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
 }
@@ -249,6 +249,8 @@ body {
 .product-card-stars {
   height: 17px;
   background-image: url(../images/svg/star.svg);
+  background-color: #000;
+  color: #fff;
   background-repeat: repeat-x;
   background-size: 18px 17px;
   background-position: left center;
@@ -280,4 +282,7 @@ body {
 }
 .pagination-current {
   background-color: #e5e5e5;
+}
+.contacts-phone {
+  font-style: normal;
 }
