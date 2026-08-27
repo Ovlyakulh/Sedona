@@ -53,10 +53,15 @@ body {
   color: #000;
 
 }
+
 .navigation {
  display: flex;
  width: 1200px;
   margin: 0 auto;
+}
+.navigation-logo {
+  width: 140px;
+  margin-right: 28px;
 }
 .navigation-list {
   margin: 0;
@@ -87,6 +92,7 @@ body {
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  background-color: #fff;
 }
 /* Hero */
 .hero {
@@ -110,6 +116,8 @@ body {
 }
 .about-title,
 .title {
+  margin: 0;
+  padding-top: 69px;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
@@ -117,6 +125,8 @@ body {
 .about-text {
   font-size: 22px;
   line-height: 118%;
+  margin: 0;
+  margin-top: 26px;
 }
 /* Advantages */
 .advantages-list {
@@ -125,6 +135,7 @@ body {
   flex-direction: column;
   list-style-type: none;
   margin: 0;
+
   padding: 0;
 
 }
@@ -147,18 +158,18 @@ body {
   align-items: center;
   text-align: center;
   width: 1200px;
-  height: 385px;
   box-sizing: border-box;
 }
 .advantages-container {
   width: 400px;
-  padding: 112px 85px;
+  padding: 103px 85px;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  align-self: stretch;
 
 }
 .advantages-image {
@@ -188,9 +199,14 @@ body {
   color: #000;
   text-align: center;
 }
+.recommendations-title {
+  padding-top: 64px;
+}
 .recommendations-text {
   font-size: 22px;
   line-height: 118%;
+  margin: 0;
+
 }
 /* tips */
 .section {
@@ -205,7 +221,10 @@ body {
   margin: 0;
   padding: 0;
 }
-.tips-item {}
+.tips-item {
+  width: 400px;
+  padding: 0 84px;
+}
 /* interested  */
 .interested {
   text-align: center;
@@ -234,11 +253,13 @@ body {
   color: #000;
 }
 .social {
-  max-width: 142px;
+  max-width: 162px;
+  margin-right: 42px;
 }
 .social-list {
   list-style-type: none;
   display: flex;
+  padding-left: 0;
 }
 .social-link {
   text-decoration: none;
@@ -255,7 +276,8 @@ body {
 }
 /* contacts*/
 .contacts {
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  width: 720px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -267,6 +289,7 @@ body {
 }
 .newsletter {
   width: 115px;
+  margin-left: auto;
 }
 /* .header-inner */
 .header-inner {
@@ -296,6 +319,7 @@ body {
 .form-filter-list {
   list-style-type: none;
   font-size: 18px;
+  padding: 0;
 }
 .form-button {
   font-weight: 700;
@@ -313,6 +337,14 @@ body {
 }
 /* .catalog-products */
 .catalog-products {
+  /* display: flex; */
+}
+.form-filter {
+  display: flex;
+}
+.form-filter-group {
+  width: 160px;
+  border: none;
 }
 .product-card {
   color: #000;
@@ -378,6 +410,7 @@ body {
 }
 .pagination {
   list-style-type: none;
+  margin: 0;
 }
 .pagination-link {
   background-color: #82b3d3;
@@ -385,4 +418,9 @@ body {
 }
 .pagination-current {
   background-color: #e5e5e5;
+}
+/* sorting-container */
+.sorting-container {
+  width: 1060px;
+  margin: 0 auto;
 }
