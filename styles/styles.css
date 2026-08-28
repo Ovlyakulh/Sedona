@@ -39,8 +39,8 @@ body {
   line-height: 180%;
   text-align: center;
   text-transform: uppercase;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -51,6 +51,12 @@ body {
 /* Page-Header */
 .page-header {
   color: #000;
+}
+.header-inner {
+  padding: 70px;
+}
+.header-inner-title {
+  margin: 0;
 }
 
 .navigation {
@@ -88,7 +94,8 @@ body {
   color: #fff;
 }
 /* Main-Index */
-.main-index {
+.main-container {
+  flex-grow: 1;
 }
 .page-container {
   width: 1200px;
@@ -310,6 +317,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
+}
+.form-label {
+  margin-right: 200px;
+}
+.select-control {
+  margin-right: 70px;
 }
 .form-filter-title {
   font-weight: 700;
