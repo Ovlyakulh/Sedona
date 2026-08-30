@@ -21,6 +21,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", sans-serif;
@@ -45,7 +46,14 @@ body {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Page-Header */
@@ -61,27 +69,38 @@ body {
 
 .navigation {
   display: flex;
+  align-items: center;
   width: 1200px;
   margin: 0 auto;
   background-color: #fff;
   color: #000;
+  padding: 0 70px;
 }
 .navigation-logo {
   width: 140px;
   margin-right: 28px;
+  flex-shrink: 0;
 }
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   margin: 0;
   padding: 0;
-  width: 600px;
+  width: 400px;
   list-style-type: none;
+  flex-grow: 2;
 }
 
 .navigation-user {
-  max-width: 268px;
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
   margin-left: auto;
+  flex-grow: 1;
 }
 .navigation-link {
+  padding: 20px 16px;
   color: inherit;
   font-weight: 700;
   text-transform: capitalize;
@@ -90,8 +109,20 @@ body {
   text-align: center;
   text-decoration: none;
 }
+.navigation-user .navigation-link {
+  min-width: 21px;
+  min-height: 18px;
+}
 .navigation-user-will {
+  background-color: #756157;
+  padding: 8px 34px;
   color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
 }
 /* Main-Index */
 .main-container {
@@ -108,6 +139,7 @@ body {
   background-size: 100% auto;
   background-color: rgb(184, 173, 202);
   background-repeat: no-repeat;
+  background-position: center;
   color: #000;
   text-align: center;
   width: 1200px;
@@ -116,9 +148,12 @@ body {
 .logo {
   display: block;
   margin: 0 auto;
+  padding-top: 52px;
+  padding-bottom: 82px;
 }
 /* About */
 .about {
+  padding: 0 275px;
   text-align: center;
   background-color: #fff;
   color: #000;
@@ -127,16 +162,20 @@ body {
 .about-title,
 .title {
   margin: 0;
-  padding-top: 69px;
+  margin-top: 69px;
   font-weight: 700;
+  line-height: 120%;
   font-size: 30px;
   text-transform: uppercase;
+}
+.about-title {
 }
 .about-text {
   font-size: 22px;
   line-height: 118%;
   margin: 0;
   margin-top: 26px;
+  margin-bottom: 69px;
 }
 /* Advantages */
 .advantages-list {
@@ -191,10 +230,42 @@ body {
   font-size: 18px;
   line-height: 117%;
   margin: 0;
-  margin-top: 30px;
+  /* margin-top: 30px; */
+}
+/* .advantages-text::before {
+  display: block;
+  content: " ";
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 auto;
+  margin-bottom: 30px;
+} */
+.advantages-container .advantages-text::before {
+  display: block;
+  content: " ";
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.advantages-background-gray .advantages-text::before,
+.advantages-background-dunkl-gray .advantages-text::before {
+  /* display: block;
+  content: " ";
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  margin-bottom: 30px; */
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .advantages-title,
 .tips-title {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 117%;
@@ -203,13 +274,12 @@ body {
 }
 /* Recommendations */
 .recommendations {
+  padding: 0 346px;
   background-color: #fff;
   color: #000;
   text-align: center;
 }
-.recommendations-title {
-  padding-top: 64px;
-}
+
 .recommendations-text {
   font-size: 22px;
   line-height: 118%;
@@ -223,6 +293,9 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
+.recommendations-text {
+  margin: 20px 0 64px 0;
+}
 .tips-list {
   display: flex;
   list-style-type: none;
@@ -234,6 +307,12 @@ body {
   width: 400px;
   padding: 0 84px;
 }
+.tips-image {
+  margin-top: 81px;
+}
+.tips-text {
+  margin-bottom: 81px;
+}
 /* interested  */
 .interested {
   text-align: center;
@@ -241,18 +320,40 @@ body {
 .interested-text {
   font-size: 22px;
   line-height: 118%;
+  margin-bottom: 54px;
+}
+.interested-link {
+  padding: 8px 50px;
+  background-color: #756157;
+  color: #fff;
+  border-radius: 4px;
 }
 /* subscribe */
 .subscribe {
+  margin-top: 96px;
   background-image: url(../images/backgroaund/subscribe.jpg);
   background-color: #8dc2ed;
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
 }
+.subscribe-title {
+  margin: 0;
+  padding-top: 96px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
 .subscribe-text {
   font-size: 22px;
   line-height: 118%;
+}
+.subscribe-form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 684px;
 }
 /* page-footer */
 .page-footer {
