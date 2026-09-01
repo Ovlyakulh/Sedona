@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <header class="page-header">
+   <header class="page-header">
       <nav class="navigation">
         <a href="index.html" class="navigation-logo">
           <img
             src="images/svg/logo.svg"
             alt="Логотипа сайта Седона"
-            class="logo"
+            class="nav.logo"
             width="140"
             height="70"
           />
@@ -204,7 +204,7 @@
         <section class="catalog-products">
           <!-- Секция с каталогом и фильтрами -->
           <div class="sorting-container">
-            <div class="select">
+            <div class="select-content">
               <label for="sort" class="form-label title"
                 >Найдено гостиниц: 38</label
               >
@@ -213,7 +213,8 @@
                 <option value="cheap">Сначала дешевые</option>
                 <option value="expensiv">Сначала дорогие</option>
               </select>
-              <a href="#" class="button button-light">
+              <div class="select-control-button-content">
+                <a href="#" class="button button-light">
                 <span class="visually-hidden"
                   >Показать карточки в виде карточек</span
                 >
@@ -245,6 +246,8 @@
                   height="14"
                 />
               </a>
+              </div>
+
             </div>
 
             <ul class="product-list">
